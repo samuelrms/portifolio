@@ -1,8 +1,10 @@
+import { Dashboard } from "../pages";
+
 export const routes = [
   {
     label: "Home",
     path: "/home",
-    element: "Home",
+    element: <Dashboard />,
   },
   {
     label: "Sobre mim",
