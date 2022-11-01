@@ -7,14 +7,19 @@ import {
   Icon,
   Backdrop,
   SpeedDialAction,
+  Typography,
+  ListItemButton,
 } from "@mui/material";
+import { blue } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../../../routes/routes";
 import { Logo } from "../../assets";
 import { ListItemLink } from "./menuLink";
+import { useAppThemeContext } from "../../contexts";
 
 export const MenuNavigation = () => {
   const navigate = useNavigate();
+  const { toggleTheme, themeName } = useAppThemeContext();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -37,41 +42,17 @@ export const MenuNavigation = () => {
       }}
     >
       <Logo onClick={handleClick} />
-      <Stack gap={0.5} flexDirection={"row"} mr={8}>
+      <Stack gap={0.5} flexDirection={"row"}>
         {routes.map((data, index) => (
-          <ListItemLink
-            key={index}
-            label={data.label}
-            path={data.path}
-            onClick={() => undefined}
-          />
+          <ListItemLink key={index} label={data.label} path={data.path} />
         ))}
-        <Backdrop open={open} />
-        <SpeedDial
-          sx={{
-            position: "absolute",
-            right: 0,
-            top: 4,
-          }}
-          ariaLabel="config"
-          direction="down"
-          icon={<Settings fontSize="medium" />}
-          onClose={handleClose}
-          onOpen={handleOpen}
-          open={open}
+        <ListItemButton
+          color="secondary"
+          sx={{ borderRadius: "100%", paddingY: 1.5 }}
+          onClick={toggleTheme}
         >
-          <SpeedDialAction
-            key={"teste"}
-            icon={
-              <Icon color="primary" fontSize="medium">
-                light
-              </Icon>
-            }
-            tooltipTitle={"Alterar tema"}
-            tooltipOpen
-            onClick={handleClose}
-          />
-        </SpeedDial>
+          <Icon color="secondary">light</Icon>
+        </ListItemButton>
       </Stack>
     </Paper>
   );
