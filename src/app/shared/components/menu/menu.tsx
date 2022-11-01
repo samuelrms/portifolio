@@ -23,7 +23,7 @@ export const MenuNavigation = () => {
         paddingY: 1,
         alignItems: "center",
         justifyContent: "space-between",
-        position: "relative",
+        maxWidth: "xl",
       }}
     >
       <Logo onClick={handleClick} />
