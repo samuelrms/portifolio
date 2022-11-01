@@ -10,8 +10,8 @@ import { Avatar } from "../../shared/assets";
 export const Dashboard = () => {
   return (
     <Container maxWidth="xl">
-      <Stack flexDirection={"row"}>
-        <Stack maxWidth={"412px"} pt={25} width={"100%"}>
+      <Stack flexDirection={"row"} justifyContent={"space-between"}>
+        <Stack maxWidth={"200px"} pt={25} width={"100%"}>
           <Paper
             sx={{ maxWidth: "160px", width: "100%", p: 1, borderRadius: 4 }}
           >
@@ -31,8 +31,8 @@ export const Dashboard = () => {
             <GitHub sx={{ cursor: "pointer", color: "#FFFFFF80" }} />
           </Stack>
         </Stack>
-        <Stack pt={5.5} width={"100%"}>
-          <Avatar width={"100%"} />
+        <Stack pt={5.5}>
+          <Avatar width={680} />
         </Stack>
         <Stack maxWidth={"200px"} mt={39} width={"100%"}>
           <Stack justifyContent={"flex-end"} flexDirection={"row"} pb={1}>
