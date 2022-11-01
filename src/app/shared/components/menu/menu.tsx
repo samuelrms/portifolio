@@ -1,16 +1,4 @@
-import { useState } from "react";
-import { Settings } from "@mui/icons-material";
-import {
-  Paper,
-  Stack,
-  SpeedDial,
-  Icon,
-  Backdrop,
-  SpeedDialAction,
-  Typography,
-  ListItemButton,
-} from "@mui/material";
-import { blue } from "@mui/material/colors";
+import { Paper, Stack, Icon, ListItemButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../../../routes/routes";
 import { Logo } from "../../assets";
@@ -19,10 +7,7 @@ import { useAppThemeContext } from "../../contexts";
 
 export const MenuNavigation = () => {
   const navigate = useNavigate();
-  const { toggleTheme, themeName } = useAppThemeContext();
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const { toggleTheme } = useAppThemeContext();
 
   const handleClick = () => {
     navigate("/home");
