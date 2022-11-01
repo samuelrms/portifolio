@@ -3,8 +3,8 @@ import { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
 }
 
 export const Avatar = ({
