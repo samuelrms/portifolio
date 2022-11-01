@@ -5,7 +5,6 @@ import {
   WhatsApp,
 } from "@mui/icons-material";
 import { Button, Container, Paper, Stack, Typography } from "@mui/material";
-import { redirect } from "react-router-dom";
 import { Avatar } from "../../shared/assets";
 
 export const Dashboard = () => {
