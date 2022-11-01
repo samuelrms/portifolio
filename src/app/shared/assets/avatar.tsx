@@ -3,17 +3,21 @@ import { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
+  width?: number;
+  height?: number;
 }
 
 export const Avatar = ({
   title,
   titleId,
+  width,
+  height,
   ...props
 }: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     {...props}
-    width={696}
-    height={700}
+    width={width ?? 696}
+    height={height ?? 700}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
