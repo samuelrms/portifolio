@@ -37,8 +37,8 @@ export const Dashboard = () => {
         </Stack>
         <Stack maxWidth={"200px"} mt={39} width={"100%"}>
           <Stack justifyContent={"flex-end"} flexDirection={"row"} pb={1}>
-            <Typography>Baixar CV </Typography>
-            <ArrowDownwardSharp />
+            <Typography sx={{ cursor: "pointer" }}>Baixar CV </Typography>
+            <ArrowDownwardSharp sx={{ cursor: "pointer", ml: 0.5 }} />
           </Stack>
           <Stack
             component={Button}
