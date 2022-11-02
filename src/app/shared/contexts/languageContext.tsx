@@ -4,7 +4,7 @@ import { usePersistedState } from "../hooks";
 import { enUS, ptBR } from "../mocks";
 
 interface LanguageContextData {
-  languageName: typeof enUS | typeof ptBR;
+  languageName: "enUS" | "ptBR";
   toggleLanguage: () => void;
 }
 
@@ -15,15 +15,14 @@ export const useAppLanguageContext = () => {
 };
 
 export const AppLanguageProvider: React.FC<Children> = ({ children }) => {
-  const [languageName, setLanguageName] = usePersistedState<
-    typeof enUS | typeof ptBR
-  >("@language_local", ptBR);
+  const [languageName, setLanguageName] = usePersistedState<"ptBR" | "enUS">(
+    "@language_local",
+    null,
+  );
 
   const toggleLanguage = useCallback(() => {
-    setLanguageName((oldLanguageName) =>
-      oldLanguageName === ptBR ? enUS : ptBR,
-    );
-  }, [setLanguageName]);
+    setLanguageName(languageName !== "ptBR" ? "ptBR" : "enUS");
+  }, [setLanguageName, languageName]);
 
   return (
     <LanguageContext.Provider value={{ languageName, toggleLanguage }}>

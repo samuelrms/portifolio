@@ -4,7 +4,7 @@ import { enUS, ptBR } from "../mocks";
 export const useLanguage = () => {
   const { languageName } = useAppLanguageContext();
 
-  const language = languageName === enUS ? enUS : ptBR;
+  const language = languageName === "ptBR" ? enUS : ptBR;
 
   return language;
 };

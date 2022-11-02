@@ -7,10 +7,10 @@ export function usePersistedState<T>(
   defaultValue: unknown,
 ): ResponseUsePersistedState<T> {
   const [state, setState] = useState(() => {
-    const getLocalTheme = localStorage.getItem(key);
+    const getLocalStateStorage = localStorage.getItem(key);
 
-    if (getLocalTheme) {
-      return JSON.parse(getLocalTheme);
+    if (getLocalStateStorage) {
+      return JSON.parse(getLocalStateStorage);
     } else {
       return defaultValue;
     }
