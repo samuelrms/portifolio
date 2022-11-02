@@ -14,10 +14,9 @@ export const stylePaper = {
 export const StyleMenuPaper = () => {
   const theme = useTheme();
   const style = {
-    elevation: 1,
+    elevation: 2,
     sx: {
       overflow: "visible",
-      filter: "drop-shadow(0px 2px 8px #000000aa)",
       background: theme.palette.common.black,
       mt: 1.5,
       "& .MuiAvatar-root": {
