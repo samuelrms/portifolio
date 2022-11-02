@@ -31,7 +31,7 @@ export const ListItemLink: React.FC<ListItemLinkProps> = ({
       {...props}
     >
       <Typography {...props} children={label} />
-      <Icon sx={{ ml: 4 }}>{icon}</Icon>
+      <Icon sx={{ ml: 7 }}>{icon}</Icon>
     </ListItem>
   );
 };

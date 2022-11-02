@@ -15,8 +15,8 @@ import { ListItemLink } from "./menuLink";
 import { useAppThemeContext } from "../../contexts";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { StyleMenuPaper, stylePaper } from "./styles";
-import { Brightness4Outlined } from "@mui/icons-material";
+import { StyleMenuPaper, stylePaper } from "./styles/styles";
+import { Brightness4Outlined, Language } from "@mui/icons-material";
 
 export const MenuNavigation = () => {
   const navigate = useNavigate();
@@ -73,17 +73,28 @@ export const MenuNavigation = () => {
             />
           </MenuItem>
         ))}
-        <MenuItem sx={{ padding: 0 }}>
+        <MenuItem sx={{ padding: 0, marginY: 1 }}>
           <ListItem
             sx={{
               borderRadius: "100%",
-              paddingY: 1.5,
               justifyContent: "space-between",
             }}
             onClick={toggleTheme}
           >
-            <Typography>Alterar Tema</Typography>
+            <Typography>Alterar tema</Typography>
             <Brightness4Outlined />
+          </ListItem>
+        </MenuItem>
+        <MenuItem sx={{ padding: 0, marginY: 1 }}>
+          <ListItem
+            sx={{
+              borderRadius: "100%",
+              justifyContent: "space-between",
+            }}
+            // onClick={toggleTheme}
+          >
+            <Typography>Alterar idioma - en-us</Typography>
+            <Language />
           </ListItem>
         </MenuItem>
       </Menu>

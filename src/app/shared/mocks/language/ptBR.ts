@@ -1,4 +1,15 @@
 export const ptBR = {
+  menu: {
+    home: "Home",
+    about: "Sobre mim",
+    portfolio: "Portifólio",
+    skills: "Skills",
+    career: "Carreira",
+    recommendations: "Recomendações",
+    contact: "Contato",
+    changeTheme: "Alterar tema",
+    changeLanguage: "Alterar idioma - en-US",
+  },
   dashboard: {
     greetings: "👋 Saudações!",
     function: "Front-end developer",
