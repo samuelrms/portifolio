@@ -26,6 +26,7 @@ export const ListMenu: React.FC<ListMenuProps> = ({
         <ListItem
           sx={{
             borderRadius: "100%",
+            paddingY: 2,
             justifyContent: "space-between",
           }}
           onClick={toggleTheme}
@@ -38,6 +39,7 @@ export const ListMenu: React.FC<ListMenuProps> = ({
         <ListItem
           sx={{
             borderRadius: "100%",
+            paddingY: 2,
             justifyContent: "space-between",
           }}
           onClick={toggleLanguage}

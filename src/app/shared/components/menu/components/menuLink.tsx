@@ -25,7 +25,7 @@ export const ListItemLink: React.FC<ListItemLinkProps> = ({
 
   return (
     <ListItem
-      sx={{ width: "100%", justifyContent: "space-between" }}
+      sx={{ width: "100%", justifyContent: "space-between", paddingY: 2 }}
       selected={!!match}
       onClick={handleClick}
       {...props}

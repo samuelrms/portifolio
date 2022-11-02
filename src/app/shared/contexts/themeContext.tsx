@@ -18,7 +18,7 @@ export const useAppThemeContext = () => {
 export const AppThemeProvider: React.FC<Children> = ({ children }) => {
   const [themeName, setThemeName] = usePersistedState<"light" | "dark">(
     "@theme_local",
-    LightTheme,
+    "light",
   );
 
   const toggleTheme = useCallback(() => {
