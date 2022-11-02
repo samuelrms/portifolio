@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { routes } from "../../../routes/routes";
 import { Logo } from "../../assets";
 import { ListItemLink } from "./menuLink";
-import { useAppThemeContext } from "../../contexts";
+import { useAppLanguageContext, useAppThemeContext } from "../../contexts";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { StyleMenuPaper, stylePaper } from "./styles/styles";
@@ -21,6 +21,7 @@ import { Brightness4Outlined, Language } from "@mui/icons-material";
 export const MenuNavigation = () => {
   const navigate = useNavigate();
   const { toggleTheme } = useAppThemeContext();
+  const { toggleLanguage } = useAppLanguageContext();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const open = Boolean(anchorEl);
@@ -91,7 +92,7 @@ export const MenuNavigation = () => {
               borderRadius: "100%",
               justifyContent: "space-between",
             }}
-            // onClick={toggleTheme}
+            onClick={toggleLanguage}
           >
             <Typography>Alterar idioma - en-us</Typography>
             <Language />
