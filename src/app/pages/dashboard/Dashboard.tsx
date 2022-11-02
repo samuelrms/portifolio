@@ -4,8 +4,15 @@ import {
   LinkedIn,
   WhatsApp,
 } from "@mui/icons-material";
-import { Button, Container, Paper, Stack, Typography } from "@mui/material";
-import { Avatar } from "../../shared/assets";
+import {
+  Box,
+  Button,
+  Container,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { avatar } from "../../shared/assets";
 
 export const Dashboard = () => {
   const onDownload = () => {
@@ -14,7 +21,7 @@ export const Dashboard = () => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "Curriculum_Samuel_Ramos.pdf";
+        alink.download = "curriculum_samuel_ramos.pdf";
         alink.click();
       });
     });
@@ -37,7 +44,7 @@ export const Dashboard = () => {
           <Typography color={"#fff"} variant="h2" fontWeight="bold">
             Ramos
           </Typography>
-          <Typography color={"#FFFFFF80"}>Front-end developer </Typography>
+          <Typography color={"#FFFFFF80"}>Front-end developer</Typography>
           <Stack flexDirection={"row"} pt={2}>
             <Stack
               component={"a"}
@@ -55,8 +62,9 @@ export const Dashboard = () => {
             </Stack>
           </Stack>
         </Stack>
-        <Stack pt={5.5}>
-          <Avatar width={680} />
+        <Stack pt={5.5} maxWidth={"50%"}>
+          {/* <Avatar width={680} /> */}
+          <Box component={"img"} src={avatar} alt={""} />
         </Stack>
         <Stack maxWidth={"200px"} mt={39} width={"100%"}>
           <Stack justifyContent={"flex-end"} flexDirection={"row"} pb={1}>
@@ -65,7 +73,7 @@ export const Dashboard = () => {
               sx={{ cursor: "pointer" }}
               onClick={onDownload}
             >
-              <Typography>Baixar CV </Typography>
+              <Typography>Baixar CV</Typography>
               <ArrowDownwardSharp sx={{ ml: 0.5 }} />
             </Stack>
           </Stack>

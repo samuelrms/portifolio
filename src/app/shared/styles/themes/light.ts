@@ -18,6 +18,9 @@ export const LightTheme = createTheme({
       paper: " #72FF4F0D",
       default: "#0A4D9E",
     },
+    common: {
+      black: "#13529b",
+    },
   },
   typography: {
     allVariants: {

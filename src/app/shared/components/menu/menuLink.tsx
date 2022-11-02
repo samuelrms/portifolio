@@ -1,14 +1,16 @@
-import { ListItemButton, ListItemText } from "@mui/material";
+import { Icon, ListItem, Typography } from "@mui/material";
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 
 interface ListItemLinkProps {
   label: string;
   path: string;
+  icon: string;
 }
 
 export const ListItemLink: React.FC<ListItemLinkProps> = ({
   path,
   label,
+  icon,
   ...props
 }) => {
   const navigate = useNavigate();
@@ -22,13 +24,14 @@ export const ListItemLink: React.FC<ListItemLinkProps> = ({
   };
 
   return (
-    <ListItemButton
-      sx={{ borderRadius: 2 }}
+    <ListItem
+      sx={{ width: "100%", justifyContent: "space-between" }}
       selected={!!match}
       onClick={handleClick}
       {...props}
     >
-      <ListItemText {...props} primary={label} />
-    </ListItemButton>
+      <Typography {...props} children={label} />
+      <Icon sx={{ ml: 4 }}>{icon}</Icon>
+    </ListItem>
   );
 };
