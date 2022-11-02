@@ -1,7 +1,6 @@
 import React, { createContext, useCallback, useContext } from "react";
 import { Children } from "../interface";
 import { usePersistedState } from "../hooks";
-import { enUS, ptBR } from "../mocks";
 
 interface LanguageContextData {
   languageName: "enUS" | "ptBR";
