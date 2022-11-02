@@ -1,28 +1,17 @@
-import {
-  Paper,
-  Stack,
-  Tooltip,
-  IconButton,
-  Menu,
-  MenuItem,
-  Typography,
-  ListItem,
-} from "@mui/material";
+import { Paper, Stack, Tooltip, IconButton, Menu } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { routes } from "../../../routes/routes";
 import { Logo } from "../../assets";
-import { ListItemLink } from "./menuLink";
 import { useAppLanguageContext, useAppThemeContext } from "../../contexts";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { StyleMenuPaper, stylePaper } from "./styles/styles";
-import { Brightness4Outlined, Language } from "@mui/icons-material";
+import { ListMenu } from "./components/listMenu";
 
 export const MenuNavigation = () => {
-  const navigate = useNavigate();
-  const { toggleTheme } = useAppThemeContext();
-  const { toggleLanguage } = useAppLanguageContext();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const { toggleLanguage } = useAppLanguageContext();
+  const { toggleTheme } = useAppThemeContext();
+  const navigate = useNavigate();
 
   const open = Boolean(anchorEl);
 
@@ -65,39 +54,7 @@ export const MenuNavigation = () => {
         anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
         sx={{ padding: 0 }}
       >
-        {routes.map((data, index) => (
-          <MenuItem sx={{ padding: 0, marginY: 1 }} key={index}>
-            <ListItemLink
-              icon={data.icon}
-              label={data.label}
-              path={data.path}
-            />
-          </MenuItem>
-        ))}
-        <MenuItem sx={{ padding: 0, marginY: 1 }}>
-          <ListItem
-            sx={{
-              borderRadius: "100%",
-              justifyContent: "space-between",
-            }}
-            onClick={toggleTheme}
-          >
-            <Typography>Alterar tema</Typography>
-            <Brightness4Outlined />
-          </ListItem>
-        </MenuItem>
-        <MenuItem sx={{ padding: 0, marginY: 1 }}>
-          <ListItem
-            sx={{
-              borderRadius: "100%",
-              justifyContent: "space-between",
-            }}
-            onClick={toggleLanguage}
-          >
-            <Typography>Alterar idioma - en-us</Typography>
-            <Language />
-          </ListItem>
-        </MenuItem>
+        <ListMenu toggleLanguage={toggleLanguage} toggleTheme={toggleTheme} />
       </Menu>
     </Paper>
   );
