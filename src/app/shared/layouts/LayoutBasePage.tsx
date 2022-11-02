@@ -8,29 +8,31 @@ interface LayoutBasePageProps {
 
 export const LayoutBasePage: React.FC<LayoutBasePageProps> = ({ children }) => {
   return (
-    <Box
-      height="100%"
-      display="flex"
-      flexDirection="column"
-      maxWidth={"xl"}
-      m={"0 auto"}
-    >
-      <Box flex={1} overflow="auto">
-        <Box padding={3}>{children}</Box>
+    <>
+      <Box display="flex" flexDirection="column" maxWidth={"xl"} m={"0 auto"}>
+        <Box flex={1}>
+          <Box padding={3} minHeight={"100vh"}>
+            {children}
+          </Box>
+        </Box>
+      </Box>
+      <Stack p={0} width={"100vw"} bgcolor={"#72FF4F1A"}>
         <Stack
           sx={{
             paddingX: 2,
             paddingY: 1,
             justifyContent: "center",
             maxWidth: "xl",
+            width: "100%",
+            margin: "0 auto",
           }}
-          height={90}
-          bgcolor={"#72FF4F1A"}
+          height={"90px"}
         >
           <Stack
             flexDirection={"row"}
             width={"50%"}
             justifyContent={"space-between"}
+            alignItems={"center"}
           >
             <Typography color={"#FFFFFF80"}>
               Copyright © Samuel Ramos · 2022
@@ -59,7 +61,7 @@ export const LayoutBasePage: React.FC<LayoutBasePageProps> = ({ children }) => {
             </Stack>
           </Stack>
         </Stack>
-      </Box>
-    </Box>
+      </Stack>
+    </>
   );
 };
