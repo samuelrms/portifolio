@@ -15,6 +15,22 @@ export const ptBR = {
     function: "Desenvolvedor front-end",
     curriculum: "Baixar CV",
     talk: "Vamos conversar",
+    workingTimeAJob: {
+      time: "1 ano de",
+      function: "Trabalho",
+    },
+    timeWorkingProgramer: {
+      time: "1 ano como",
+      function: "Programador",
+    },
+    developer: {
+      developer: "Desenvolvedor",
+      function: "Front-end",
+    },
+    experience: {
+      projects: "Dezenas de projetos e",
+      experience: "Experiências",
+    },
   },
   about: {},
   portfolio: {},

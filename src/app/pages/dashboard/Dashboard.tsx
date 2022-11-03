@@ -8,13 +8,14 @@ import {
   Box,
   Button,
   Container,
+  Divider,
   Paper,
   Stack,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { avatar } from "../../shared/assets";
+import { avatar, CodeIcon, ProjectIcon } from "../../shared/assets";
 import { useLanguage } from "../../shared/hooks";
 
 export const Dashboard = () => {
@@ -43,6 +44,7 @@ export const Dashboard = () => {
         flexDirection={mdDown ? "column" : "row"}
         justifyContent={"space-between"}
         alignItems={mdDown ? "center" : ""}
+        paddingBottom={10}
       >
         <Stack
           maxWidth={mdDown ? (smDown ? "100%" : "65%") : "200px"}
@@ -128,6 +130,92 @@ export const Dashboard = () => {
               <WhatsApp sx={{ color: "#72FF4F" }} fontSize="small" />
               <Typography pl={1}>{dashboard.talk}</Typography>
             </Stack>
+          </Stack>
+        </Stack>
+      </Stack>
+      <Divider />
+      <Stack alignItems={"center"}>
+        <Stack
+          paddingY={10}
+          width={"100%"}
+          maxWidth={900}
+          alignItems={mdDown ? "center" : ""}
+          flexDirection={mdDown ? "column" : "row"}
+          justifyContent={"space-between"}
+        >
+          <Stack
+            maxWidth={250}
+            width={"100%"}
+            height={200}
+            borderRadius={4}
+            border={"1px solid #72FF4F80"}
+            alignItems={"center"}
+            justifyContent={"flex-end"}
+          >
+            <CodeIcon />
+            <Stack alignItems={"center"} paddingY={2}>
+              <Typography color={"#fff"}>
+                {dashboard.timeWorkingProgramer.time}
+              </Typography>
+              <Typography
+                color={"#fff"}
+                fontWeight={"bold"}
+                fontSize={"1.75rem"}
+              >
+                {dashboard.timeWorkingProgramer.function}
+              </Typography>
+            </Stack>
+          </Stack>
+          <Stack
+            component={Paper}
+            maxWidth={250}
+            width={"100%"}
+            height={200}
+            borderRadius={4}
+            marginTop={mdDown ? 5 : ""}
+            border={`1px solid ${theme.palette.background.paper}`}
+            alignItems={"center"}
+            justifyContent={"flex-end"}
+          >
+            <ProjectIcon />
+            <Stack alignItems={"center"} paddingY={2}>
+              <Typography color={"#fff"}>
+                {dashboard.workingTimeAJob.time}
+              </Typography>
+              <Typography
+                color={"#fff"}
+                fontWeight={"bold"}
+                fontSize={"1.75rem"}
+              >
+                {dashboard.workingTimeAJob.function}
+              </Typography>
+            </Stack>
+          </Stack>
+        </Stack>
+        <Stack
+          component={Paper}
+          display={mdDown ? "none" : "flex"}
+          height={110}
+          maxWidth={900}
+          width={"100%"}
+          marginBottom={10}
+          flexDirection={"row"}
+          justifyContent={"space-between"}
+          alignItems={"center"}
+          borderRadius={4}
+          paddingX={7}
+        >
+          <Stack>
+            <Typography>{dashboard.developer.developer}</Typography>
+            <Typography fontWeight={"bold"} fontSize={"1.75rem"}>
+              {dashboard.developer.function}
+            </Typography>
+          </Stack>
+          <Stack>
+            <Typography>{dashboard.experience.projects}</Typography>
+            <Typography fontWeight={"bold"} fontSize={"1.75rem"}>
+              {dashboard.experience.experience}
+            </Typography>
           </Stack>
         </Stack>
       </Stack>

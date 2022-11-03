@@ -15,6 +15,22 @@ export const enUS = {
     function: "Front-end developer",
     curriculum: "Download CV",
     talk: "Let's talk",
+    workingTimeAJob: {
+      time: "1 year of ",
+      function: "Work",
+    },
+    timeWorkingProgramer: {
+      time: "1 year as ",
+      function: "Programmer",
+    },
+    developer: {
+      developer: "Developer",
+      function: "Front-end",
+    },
+    experience: {
+      projects: "Dozens of projects and",
+      experience: "Experiences",
+    },
   },
   about: {},
   portfolio: {},
