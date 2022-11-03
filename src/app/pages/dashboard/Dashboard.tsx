@@ -11,12 +11,19 @@ import {
   Paper,
   Stack,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { avatar } from "../../shared/assets";
 import { useLanguage } from "../../shared/hooks";
 
 export const Dashboard = () => {
   const { dashboard } = useLanguage();
+
+  const theme = useTheme();
+
+  const smDown = useMediaQuery(theme.breakpoints.down("sm"));
+  const mdDown = useMediaQuery(theme.breakpoints.down("md"));
 
   const onDownload = () => {
     fetch("curriculum.pdf").then((response) => {
@@ -32,19 +39,37 @@ export const Dashboard = () => {
 
   return (
     <Container maxWidth="xl">
-      <Stack flexDirection={"row"} justifyContent={"space-between"}>
-        <Stack maxWidth={"200px"} pt={25} width={"100%"}>
+      <Stack
+        flexDirection={mdDown ? "column" : "row"}
+        justifyContent={"space-between"}
+        alignItems={mdDown ? "center" : ""}
+      >
+        <Stack
+          maxWidth={mdDown ? (smDown ? "100%" : "65%") : "200px"}
+          pt={mdDown ? 10 : 25}
+          width={"100%"}
+        >
           <Paper
             sx={{ maxWidth: "160px", width: "100%", p: 1, borderRadius: 4 }}
           >
-            <Typography fontWeight="bold" fontSize={20}>
+            <Typography fontWeight="bold" fontSize={16}>
               {dashboard.greetings}
             </Typography>
           </Paper>
-          <Typography color={"#fff"} variant="h2" fontWeight="bold">
+          <Typography
+            color={"#fff"}
+            variant={"h2"}
+            fontSize={mdDown ? (smDown ? "2.75rem" : "3.25rem") : "3.75rem"}
+            fontWeight="bold"
+          >
             Samuel
           </Typography>
-          <Typography color={"#fff"} variant="h2" fontWeight="bold">
+          <Typography
+            color={"#fff"}
+            variant={"h2"}
+            fontSize={mdDown ? (smDown ? "2.75rem" : "3.25rem") : "3.75rem"}
+            fontWeight="bold"
+          >
             Ramos
           </Typography>
           <Typography color={"#FFFFFF80"}>{dashboard.function}</Typography>
@@ -65,14 +90,16 @@ export const Dashboard = () => {
             </Stack>
           </Stack>
         </Stack>
-        <Stack pt={5.5} maxWidth={"50%"}>
+        <Stack pt={5.5} maxWidth={mdDown ? (smDown ? "100%" : "65%") : "50%"}>
           <Box component={"img"} src={avatar} alt={""} />
         </Stack>
         <Stack
-          maxWidth={"200px"}
-          mt={39}
+          maxWidth={mdDown ? (smDown ? "100%" : "65%") : "200px"}
+          mt={mdDown ? 10 : 39}
           width={"100%"}
           alignItems={"flex-end"}
+          flexDirection={mdDown ? "row" : "column"}
+          justifyContent={mdDown ? "space-around" : ""}
         >
           <Stack justifyContent={"flex-end"} flexDirection={"row"} pb={1}>
             <Stack

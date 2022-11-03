@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { GitHub, LinkedIn } from "@mui/icons-material";
 
 interface LayoutBasePageProps {
@@ -7,6 +7,10 @@ interface LayoutBasePageProps {
 }
 
 export const LayoutBasePage: React.FC<LayoutBasePageProps> = ({ children }) => {
+  const theme = useTheme();
+
+  const mdDown = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <>
       <Box display="flex" flexDirection="column" maxWidth={"xl"} m={"0 auto"}>
@@ -30,7 +34,7 @@ export const LayoutBasePage: React.FC<LayoutBasePageProps> = ({ children }) => {
         >
           <Stack
             flexDirection={"row"}
-            width={"50%"}
+            width={mdDown ? "100%" : "50%"}
             justifyContent={"space-between"}
             alignItems={"center"}
           >
