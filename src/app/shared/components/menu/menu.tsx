@@ -38,7 +38,7 @@ export const MenuNavigation = () => {
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
           >
-            <MenuIcon color="primary" fontSize="large" />
+            <MenuIcon sx={{ color: "#72FF4F" }} fontSize="large" />
           </IconButton>
         </Tooltip>
       </Stack>

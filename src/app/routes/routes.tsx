@@ -1,4 +1,4 @@
-import { Dashboard } from "../pages";
+import { About, Dashboard } from "../pages";
 
 export const routes = [
   {
@@ -10,7 +10,7 @@ export const routes = [
   {
     label: "Sobre mim",
     path: "/about",
-    element: "Sobre mim",
+    element: <About />,
     icon: "info",
   },
   {

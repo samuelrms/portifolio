@@ -32,7 +32,17 @@ export const ptBR = {
       experience: "Experiências",
     },
   },
-  about: {},
+  about: {
+    about: "🧐 Sobre mim",
+    nameFirst: "Samuel Antonio de",
+    nameSecond: "Oliveira Ramos",
+    presentation: "👋 Me chamo Samuel Ramos. Prazer!",
+    experience:
+      "👨‍💻 Há pouco mais de 1 ano desenvolvendo e programando interfaces com JavaScript, ReactJs e Typescript.",
+    interest:
+      "💡 Interesses em desenvolvimento Front-end com React, Flutter, NodeJS, Node com Ts e UX/UI Design.",
+    evolution: "🚀 Tentando ser um pouquinho melhor do que ontem todos dias.",
+  },
   portfolio: {},
   skills: {},
   career: {},
