@@ -1,6 +1,13 @@
 import React from "react";
-import { Box, Stack, Typography, useTheme, useMediaQuery } from "@mui/material";
-import { GitHub, LinkedIn } from "@mui/icons-material";
+import {
+  Box,
+  Stack,
+  Typography,
+  useTheme,
+  useMediaQuery,
+  Paper,
+} from "@mui/material";
+import { Forward, GitHub, LinkedIn } from "@mui/icons-material";
 
 interface LayoutBasePageProps {
   children: React.ReactNode;
@@ -15,9 +22,31 @@ export const LayoutBasePage: React.FC<LayoutBasePageProps> = ({ children }) => {
     <>
       <Box display="flex" flexDirection="column" maxWidth={"xl"} m={"0 auto"}>
         <Box flex={1}>
-          <Box padding={3} minHeight={"100vh"}>
+          <Box padding={3} pb={0} minHeight={"100vh"}>
             {children}
           </Box>
+          <Stack
+            position={"sticky"}
+            bottom={16}
+            right={16}
+            alignItems={"flex-end"}
+          >
+            <Stack
+              sx={{ borderRadius: "50%", cursor: "pointer" }}
+              component={Paper}
+              width={64}
+              height={64}
+              mr={3}
+              alignItems={"center"}
+              justifyContent={"center"}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <Forward
+                fontSize="large"
+                sx={{ transform: "rotate(-90deg)", color: "#72FF4F" }}
+              />
+            </Stack>
+          </Stack>
         </Box>
       </Box>
       <Stack p={0} width={"100vw"} bgcolor={"#72FF4F1A"}>

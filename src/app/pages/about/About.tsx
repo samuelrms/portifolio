@@ -99,17 +99,12 @@ export const About = () => {
         </Stack>
       </Stack>
       <Divider />
-      <Stack
-        // flexDirection={mdDown ? "column" : "row"}
-        // justifyContent={"space-between"}
-        // alignItems={mdDown ? "center" : ""}
-        paddingTop={8}
-      >
+      <Stack paddingTop={8}>
         <Stack>
           <Typography variant="h2" fontWeight={"bold"}>
             {about.resume.resumeTitle}
           </Typography>
-          <Typography pl={2} pt={2}>
+          <Typography color={"#fff"} pl={2} pt={2}>
             {about.resume.resume}
           </Typography>
         </Stack>
@@ -119,6 +114,7 @@ export const About = () => {
               <Typography
                 width={smDown ? "100%" : "60%"}
                 variant={"h4"}
+                fontWeight="bold"
                 children={about.resume.titleSkillsPersonal}
                 sx={{ cursor: "pointer" }}
               />
@@ -133,10 +129,10 @@ export const About = () => {
                 {about.resume.listSkillsPersonal.map((data, index) => (
                   <ListItem sx={{ pl: 4, paddingY: 0.5 }}>
                     <ListItemIcon sx={{ minWidth: 0, mr: 1 }}>
-                      <SubdirectoryArrowRight />
+                      <SubdirectoryArrowRight sx={{ color: "#fff" }} />
                     </ListItemIcon>
                     <ListItemText>
-                      <ListItemText primary={data} key={index} />
+                      <Typography color="#fff" children={data} key={index} />
                     </ListItemText>
                   </ListItem>
                 ))}
@@ -148,6 +144,7 @@ export const About = () => {
               <Typography
                 width={smDown ? "100%" : "60%"}
                 variant={"h4"}
+                fontWeight="bold"
                 children={about.resume.titleKnowledgeIn}
                 sx={{ cursor: "pointer" }}
               />
@@ -162,10 +159,10 @@ export const About = () => {
                 {about.resume.listKnowledgeIn.map((data, index) => (
                   <ListItem sx={{ pl: 4, paddingY: 0.5 }}>
                     <ListItemIcon sx={{ minWidth: 0, mr: 1 }}>
-                      <SubdirectoryArrowRight />
+                      <SubdirectoryArrowRight sx={{ color: "#fff" }} />
                     </ListItemIcon>
                     <ListItemText>
-                      <ListItemText primary={data} key={index} />
+                      <Typography color="#fff" children={data} key={index} />
                     </ListItemText>
                   </ListItem>
                 ))}
