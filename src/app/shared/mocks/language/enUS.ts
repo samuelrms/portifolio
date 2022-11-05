@@ -42,6 +42,30 @@ export const enUS = {
     interest:
       "💡 IInterests in Front-end development with React, Flutter, NodeJS, Node with Ts and UX/UI Design.",
     evolution: "🚀 Trying to be a little better than yesterday every day.",
+    resume: {
+      resume:
+        "I work in the information technology area, with analysis and/or web and app development, with React.Js and React.TS.",
+      titleSkillsPersonal: "Soft skills:",
+      listSkillsPersonal: [
+        "- Communication",
+        "- Time management",
+        "- Problems solution",
+        "- Flexibility and adaptability",
+        "- Dealing with pressure",
+        "- Team work",
+        "- Self confidence",
+        "- Support criticism",
+      ],
+      titleKnowledgeIn: "Knowledge in:",
+      listKnowledgeIn: [
+        "- Programming Languages: JavaScript, Typescript, HTML, CSS, Java, Node.js, Node.ts.",
+        "- Creation of interfaces: AdobeXD and Figma.",
+        "- Image editors: AdobeXS, Figma and PhotoShop.",
+        "- Software and Development Tools: Visual Studio Code, Web Storm, Microsoft Office, Visual Studio and Android Studio.",
+        "- Systems Analysis: Requirements gathering, Documentation elaboration using StoryBook, Application Development using JavaScript technologies (ES6, ES7 and ES8) and also Typescript.",
+        "- Operating Systems: Windows and Linux.",
+      ],
+    },
   },
   portfolio: {},
   skills: {},
