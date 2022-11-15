@@ -68,7 +68,15 @@ export const enUS = {
       ],
     },
   },
-  portfolio: {},
+  portfolio: {
+    title: "Works and projects",
+    technologies: [
+      "React.Js",
+      "React with Typescript",
+      "React Native",
+      "Design",
+    ],
+  },
   skills: {},
   career: {},
   recommendations: {},

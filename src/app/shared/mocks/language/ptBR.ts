@@ -68,7 +68,15 @@ export const ptBR = {
       ],
     },
   },
-  portfolio: {},
+  portfolio: {
+    title: "Trabalhos e projetos",
+    technologies: [
+      "React.Js",
+      "React com Typescript",
+      "React Native",
+      "Design",
+    ],
+  },
   skills: {},
   career: {},
   recommendations: {},

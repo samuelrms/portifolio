@@ -1,4 +1,4 @@
-import { About, Dashboard } from "../pages";
+import { About, Dashboard, Portfolio } from "../pages";
 
 export const routes = [
   {
@@ -16,7 +16,7 @@ export const routes = [
   {
     label: "Portfólio",
     path: "/portfolio",
-    element: "Portfólio",
+    element: <Portfolio />,
     icon: "portrait",
   },
   {
