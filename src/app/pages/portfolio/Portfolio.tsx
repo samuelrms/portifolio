@@ -6,14 +6,13 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React from "react";
 import { useLanguage } from "../../shared/hooks";
 
 export const Portfolio = () => {
   const { portfolio } = useLanguage();
 
   const theme = useTheme();
-  const smDown = useMediaQuery(theme.breakpoints.down("sm"));
+  // const smDown = useMediaQuery(theme.breakpoints.down("sm"));
   const mdDown = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
