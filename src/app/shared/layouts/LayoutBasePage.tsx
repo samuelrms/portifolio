@@ -32,7 +32,7 @@ export const LayoutBasePage: React.FC<LayoutBasePageProps> = ({ children }) => {
             alignItems={"flex-end"}
           >
             <Stack
-              sx={{ borderRadius: "50%", cursor: "pointer" }}
+              sx={{ borderRadius: "50%", cursor: "pointer", zIndex: 10 }}
               component={Paper}
               width={64}
               height={64}
