@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# Portifolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚨🚨 Projeto em construção 🚨🚨
 
-## Available Scripts
+Olá pessoal, gostaria de apresentar para vocês meu protifolio.
 
-In the project directory, you can run:
+Neste documento vou falar sobre, como rodar o projeto e pontuar algumas das minhas decisões sobre o projeto que julgo válidas.
 
-### `npm start`
+## Introdução
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Desenvolvendo este projeto foquei nos seguintes pontos que julgo cruciais para todo projeto:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Ter um versionamento bem documentado, com commits claros e explicativos.
+- Desenvolver um código legível, organizado e de fácil manutenção seguindo boas práticas e padrões de código limpo.
+- Buscando ter uma UI responsiva e uma UX fluída, acessível para todos os dispositivos.
+- Criar um projeto escalável, bem componentizado e com uma boa estrutura de arquivos.
 
-### `npm test`
+## Principais ferramentas utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- Typescript
+- Axios
+- React Router Dom
+- Material UI
 
-### `npm run build`
+## Arquitetura
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Sobre arquitetura de pastas, o projeto segue uma estrutura básica, onde:
+  - [pages](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/assets): páginas da aplicação.
+  - [routes](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/assets): todas as rotas.
+  - [shared](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared): todos as pastas compartilhadas da aplicação.
+  - [assets](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/assets): arquivos estáticos, como imagens e svg.
+  - [components](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/components): arquivos de componentes reutilizáveis.
+  - [constantes](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/components): arquivos constantes reaproveitáveis em toda aplicação.
+  - [contexts](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/contexts): todos os contextos de dados que serão utilizados pelos componentes.
+  - [hooks](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/hooks): arquivos de hooks que serão utilizados pelos componentes.
+  - [interface](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/Interfaces): arquivo de interface reutilizáveis.
+  - [layouts](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/layouts): arquivos de layout base da aplicação.
+  - [mocks](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/mocks): dados armazenados localmente na aplicação e idiomas.
+  - [services](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/services): configurações de consumo da API.
+  - [styles](https://github.com/samuelrms/study-mui-with-ts/tree/main/src/shared/themes): arquivos de tema que são utilizados para aplicar o tema dark e light.
+  
+## Rodando o projeto
+```
+yarn
+```
+**Para instalar as dependências do projeto.**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+```
+yarn start
+```
+**Para rodar o projeto em modo de desenvolvimento.**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn build
+```
+**Para fazer o build do projeto para produção.**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Desenvolvimento 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+🚨🚨 Projeto em construção 🚨🚨
 
-## Learn More
+## Conclusão
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Gostaria de agradecer a você que leu até aqui! Espero que goste do projeto :)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Good coding!
