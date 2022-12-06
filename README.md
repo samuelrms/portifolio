@@ -65,6 +65,9 @@ yarn build
 
 🚨🚨 Projeto em construção 🚨🚨
 
+## Link page
+### https://samuelrms.netlify.app/home
+
 ## Conclusão
 
 Gostaria de agradecer a você que leu até aqui! Espero que goste do projeto :)
